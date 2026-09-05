@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 FinTrace AI | Autonomous Payment Reconciliation & Support Agent
+**Built for PS-8: Automated Settlement & Customer Q&A Platform**
 
-## Getting Started
+FinTrace AI is an enterprise-grade SaaS dashboard designed to bridge the gap between legacy banking infrastructure and customer support teams. By autonomously cross-referencing payment gateways, bank settlements, and internal ledgers, FinTrace AI eliminates payment ambiguity, translates cryptic bank error codes into **Plain-English delay explanations**, and generates empathetic, native-language support resolutions.
 
-First, run the development server:
+---
 
+## 🌟 Core Features
+
+* **Real-Time Batch Reconciliation Matrix**: Dynamically ingests and cross-references `gateway.csv`, `bank.csv`, and `ledger.csv` files to instantly flag discrepancies, missing entries, and exceptions.
+* **AI-Driven Audit Engine**: Powered by the Groq SDK (`llama-3.1-8b-instant`) to perform deep-dive risk assessments and confidence scoring on failed or delayed transactions.
+* **Plain-English Settlement Status & Delay Reason**: Automatically translates complex database logs and bank error codes into clear, non-technical explanations for support agents (Strictly fulfilling PS-8 requirements).
+* **Multi-Lingual Payer-Facing Resolution Generator**: Instantly drafts empathetic messaging across multiple regional languages (Hindi, Telugu, Tamil, Bengali, Marathi, etc.) ensuring anxious customers receive instant clarity.
+
+---
+
+## 🛠 Tech Stack
+
+* **Frontend & Framework**: Next.js 14 (App Router), React, TypeScript
+* **Styling**: Tailwind CSS (Dark-Mode Enterprise SaaS Aesthetic)
+* **AI & NLP Inference**: Groq SDK (`llama-3.1-8b-instant`)
+* **Data Processing**: `csv-parse/sync` for multi-source log reconciliation
+
+---
+
+## 🚀 Getting Started Locally
+
+Follow these steps to run the application locally on your machine:
+
+### 1. Clone the Repository
 ```bash
+git clone [https://github.com/Kushagra061310/fintrace-ai-live.git](https://github.com/Kushagra061310/fintrace-ai-live.git)
+cd fintrace-agent
+npm install
+GROQ_API_KEY=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
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📂 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+fintrace-agent/
+├── app/
+│   ├── api/
+│   │   └── trace/
+│   │       └── route.ts     # Core API endpoint handling CSV parsing & Groq AI prompt-chaining
+│   ├── globals.css          # Tailwind styling setup
+│   └── page.tsx             # Main SaaS dashboard interface
+├── mock_data/
+│   ├── gateway.csv          # Payment gateway transaction logs
+│   ├── bank.csv             # Bank settlement records
+│   └── ledger.csv           # Internal financial ledger entries
+├── public/                  # Static assets
+├── .env.local               # Local environment variables (Ignored by Git)
+└── package.json             # Project dependencies and metadata
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone [https://github.com/Kushagra061310/fintrace-ai-live.git](https://github.com/Kushagra061310/fintrace-ai-live.git)
+cd fintrace-agent
