@@ -35,7 +35,7 @@ npm install
 GROQ_API_KEY=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
 npm run dev
 
-📂 Project Structure
+### 📂 Project Structure
 
 fintrace-agent/
 ├── app/
